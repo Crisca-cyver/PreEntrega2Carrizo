@@ -1,0 +1,52 @@
+// animations.scss
+
+@keyframes enterFromBottom {
+    from {
+    opacity: 0;
+    transform: translateY(20px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+@keyframes focusEffect {
+    0% {
+    border-bottom: 2px solid $footer-background;
+    }
+    100% {
+    border-bottom: 2px solid #00acff;
+    }
+}
+
+@keyframes clickEffect {
+    0% {
+    transform: scale(1);
+    }
+    100% {
+    transform: scale(0.95);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+    transform: scale(1);
+    }
+    to {
+    transform: scale(1.1);
+    }
+}
+
+@keyframes rotate {
+    from {
+    transform: rotate(0deg);
+    }
+    to {
+    transform: rotate(5deg);
+    }
+}
+
+@mixin animation($name, $duration, $timing-function: ease, $iteration-count: 1) {
+    animation: $name $duration $timing-function $iteration-count;
+}

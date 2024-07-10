@@ -1,0 +1,28 @@
+@import 'variables';
+@import 'mixins';
+
+body {
+  margin: 0px;
+  font-family: $font-family;
+  background: $background-color;
+}
+
+.btn {
+  border: none;
+  @include border-radius($border-radius);
+  color: white;
+  padding: 30px 50px;
+  margin: 5px;
+  font-size: 17px;
+  @include transition($transition);
+  text-decoration: none;
+  display: inline-block;
+  background: $primary-color;
+}
+.btn:hover {
+  box-shadow: $hover-shadow;
+}
+
+.py-55 {
+  padding-top: 7rem !important;
+}

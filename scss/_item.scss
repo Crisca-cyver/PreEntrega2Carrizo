@@ -1,0 +1,38 @@
+@import 'variables';
+@import 'mixins';
+
+.items_area {
+  display: inline-block;
+}
+
+.item {
+  display: inline-block;
+  background: $item-background;
+  padding: 10px;
+  margin: 1px;
+  border: $item-border;
+  @include border-radius(3px);
+  margin-bottom: 3px;
+  @include transition($transition);
+}
+.item:hover {
+  background: $item-hover-background;
+}
+.item p {
+  max-width: 150px;
+  color: $item-color;
+}
+.item img {
+  width: 100px;
+  height: 100px;
+}
+.item a {
+  background: $footer-background;
+  padding: 5px 10px;
+  @include border-radius(2px);
+  text-decoration: none;
+  color: white;
+}
+.item a:hover {
+  background: #499ac2;
+}
