@@ -11,7 +11,7 @@ body h2{
     text-align: center;
 }
 
-.navebar{
+.navbar {
     background: #579ec2;
     position: fixed;
     top: 0px;
@@ -20,29 +20,66 @@ body h2{
     color: white;
     border-bottom: 5px solid #30789b;
     display: flex;
-    justify-content: flex-start; 
+    justify-content: space-between; 
     align-items: center; 
-    }
-.navebar ul{
+}
+
+.desktop-menu {
     list-style: none;
     margin: 0px;
     display: flex; 
-    }
-.navebar ul li{
+}
+
+.desktop-menu li {
     padding-bottom: 21px;
     padding-top: 21px;
     transition: all 0.5s;
     margin-left: 10px; 
-    }
-.navebar ul li:hover{
-        box-shadow: inset 0px 100px #486471;
-    }
-.navebar ul li a{
+}
+
+.desktop-menu li:hover {
+    box-shadow: inset 0px 100px #486471;
+}
+
+.desktop-menu li a {
     padding: 21px;
     text-decoration: none;
     color: white;
     text-shadow: 0px 0px 15px #353535;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+/* Mostrar el menú de escritorio en pantallas grandes */
+@media (min-width: 768px) {
+    .desktop-menu {
+        display: flex;
     }
+    .mobile-menu {
+        display: none;
+    }
+}
+
+/* Mostrar el menú móvil en pantallas pequeñas */
+@media (max-width: 767px) {
+    .desktop-menu {
+        display: none;
+    }
+    .mobile-menu {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .mobile-menu a {
+        font-size: 24px; /* Aumenta el tamaño de los iconos */
+        flex: 1; /* Hace que cada enlace ocupe el mismo espacio */
+        text-align: center; /* Centra los iconos */
+        padding: 10px 0; /* Agrega padding para hacer los iconos más fáciles de tocar */
+    }
+}
+
 .footer{
     background: #607D8B;
     color: white;
@@ -231,7 +268,7 @@ border-bottom: 2px solid #00acff;
 .main_img{
 width: 50%;
 border-top-style: solid;
-border-top-width: 60px;
+border-top-width: 55px;
 transition: all 0.3s;
 }
 
@@ -245,90 +282,40 @@ transition: all 0.3s;
 
 
 /* =============================== Mobile styles =========================== */
-.m_navbar{
-display:none;
-background: #607D8B;
-position: fixed;
-top: 0px;
-right: 0px;
-left: 0px;
-color: white;
-border-bottom: 5px solid #7999A9;
-text-align:center;
-}
-.m_navbar a{
-display: inline-block;
-cursor: pointer;
-padding: 14px;
-color: white;
-text-decoration: none;
-box-shadow: inset 0px 0px #486471;
-transition: box-shadow 0.5s;
-}
-.m_navbar a:hover{
-box-shadow: inset 0px 100px #486471;
-}
-
 @media only screen and (max-width: 750px) {
 /* For mobile phones: */
-.navebar{
-display:none;
-}
-.m_navbar{
-display: inline-flex;
-align-items: center;
-}
-
-.m_navbar{
-background: #607D8B;
-position: fixed;
-top: 0px;
-right: 0px;
-left: 0px;
-color: white;
-border-bottom: 5px solid #7999A9;
-text-align:center;
-}
-.m_navbar a{
-display: inline-block;
-cursor: pointer;
-padding: 14px;
-color: white;
-text-decoration: none;
-box-shadow: inset 0px 0px #486471;
-transition: box-shadow 0.5s;
-}
-.m_navbar a:hover{
-box-shadow: inset 0px 100px #486471;
-}
-.search_app{
-width:90%;
-}
-.item p{
-display:none;
-}
-.item h2{
-text-align: center;
-font-size:15px;
-}
-.article{
-    width: 270px;
-}
-.article img {
-    width: 270px;
-    height: 170px;
-}
-.main_img{
-width: 80%;
-border-top-style: solid;
-border-top-width: 55px;
-}
-.contact_fields{
-width:235px;
-}
-.contact_div{
-width:250px;
-}
+    .mobile-menu {
+        display: flex;
+        justify-content: space-around;
+    }
+    .search_app{
+        width:90%;
+    }
+    .item p{
+        display:none;
+    }
+    .item h2{
+        text-align: center;
+        font-size:15px;
+    }
+    .article{
+        width: 270px;
+    }
+    .article img {
+        width: 270px;
+        height: 170px;
+    }
+    .main_img{
+        width: 80%;
+        border-top-style: solid;
+        border-top-width: 55px;
+    }
+    .contact_fields{
+        width:235px;
+    }
+    .contact_div{
+        width:250px;
+    }
 }
 
 /*  Diseñada y programada por : Cristian Carrizo */
@@ -352,4 +339,3 @@ width:250px;
     text-shadow: 3px 3px 1px rgb(215, 215, 215);
     margin: 2px;
 }
-
