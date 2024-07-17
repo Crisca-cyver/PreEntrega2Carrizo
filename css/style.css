@@ -7,29 +7,11 @@ body{
     background: #F5F5F5;
 }
 
+body h2{
+    text-align: center;
+}
 
-.btn{
-    border: none;
-    border-radius: 4px;
-    color: white;
-    padding: 30px 50px 30px 50px;
-    margin: 5px;
-    font-size: 17px;
-    transition: all 0.5s;
-    text-decoration: none;
-    display: inline-block;
-    background: #3479AB;
-    }
-
-.btn:hover{
-    box-shadow: 1px 1px 20px #828282;
-    }
-
-.py-55{
-    padding-top: 7rem !important;
-    }    
-
-#navbar{
+.navebar{
     background: #579ec2;
     position: fixed;
     top: 0px;
@@ -37,28 +19,31 @@ body{
     left: 0px;
     color: white;
     border-bottom: 5px solid #30789b;
-    float: right;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center; 
     }
-#navbar ul{
+.navebar ul{
     list-style: none;
     margin: 0px;
+    display: flex; 
     }
-#navbar ul li{
+.navebar ul li{
     padding-bottom: 21px;
     padding-top: 21px;
     transition: all 0.5s;
-    float: left;
+    margin-left: 10px; 
     }
-#navbar ul li:hover{
+.navebar ul li:hover{
         box-shadow: inset 0px 100px #486471;
     }
-#navbar ul li a{
+.navebar ul li a{
     padding: 21px;
     text-decoration: none;
     color: white;
     text-shadow: 0px 0px 15px #353535;
     }
-#footer{
+.footer{
     background: #607D8B;
     color: white;
     text-shadow: 0px 0px 15px #353535;
@@ -70,26 +55,7 @@ body{
     gap: 20px;
     align-items: center;
     justify-items: center;
-}
-.caret {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: 2px;
-    vertical-align: middle;
-    border-top: 4px solid;
-    border-right: 4px solid transparent;
-    border-left: 4px solid transparent;
-}
-.caret2 {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: 2px;
-    vertical-align: middle;
-    border-bottom: 6px solid;
-    border-right: 6px solid transparent;
-    border-left: 6px solid transparent;
+    margin-top: 5px;
 }
     #dropdownmenu{
     display: none;
@@ -119,21 +85,8 @@ body{
     box-shadow: 0px 4px 0px #000;
         margin-left: 8px;
 }
-#about_dialog{
-position: relative;
-background: #007C96;
-color: white;
-top: 100px;
-border-radius: 10px;
-padding: 10px;
-box-shadow: 0px 0px 10px #A1A1A1;
-max-width: 400px;
-min-width: 150px;
-margin: 20px;
-border: 5px solid #00B8DE;
-}
+
 #close_dialog{
-    float: right;
     background: url('../images/close.png') no-repeat;
     height: 30px;
     width: 30px;
@@ -145,34 +98,14 @@ border: 5px solid #00B8DE;
 #close_dialog:hover{
     opacity: 0.8;
 }
-#about_dialog_bg{
-    display: none;
-    background: rgba(255, 255, 255, 0.66);
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-#about_dialog a{
-    margin: 5px;
-    color: white;
-    text-decoration: none;
-    transition: all 0.5s;
-    border-radius: 3px;
-    padding: 3px;
-}
-#about_dialog a:hover{
-            background: #0389a5;
-}
+
+
 .contact_div{
     margin: 15px;
     background: #ffffff;
     padding: 20px;
     border-radius: 3px;
-    max-width: 400px;
+    max-width: 338px;
     border: 1px solid #C5C5C5;
     box-shadow: 0px 0px 3px #DBDBDB;
     transition: all 1s;
@@ -217,16 +150,21 @@ border-bottom: 2px solid #00acff;
     border: 1px solid #F0F0F0;
     border-radius: 3px;
     margin-bottom: 3px;
+    text-align: center;
     transition: all 0.5s;
 }
 .item:hover{
     background: #fbfbfb;
 }
 .item p{
+    text-align: center;
     max-width: 150px;
     color: #606060;
 }
 .item img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 100px;
     height: 100px;
 }
@@ -236,6 +174,7 @@ border-bottom: 2px solid #00acff;
     border-radius: 2px;
     text-decoration: none;
     color: white;
+    text-align: center;
 }
 .item a:hover{
     background: #499ac2;
@@ -246,6 +185,7 @@ border-bottom: 2px solid #00acff;
     border: 3px solid #efefef;
     border-radius: 30px;
     padding: 10px;
+    width: 90%;
     transition: all 1s;
 }
 .search_app:focus{
@@ -288,8 +228,10 @@ border-bottom: 2px solid #00acff;
     width: 350px;
     height: 196px;
 }
-#main_img{
-width: 350px;
+.main_img{
+width: 50%;
+border-top-style: solid;
+border-top-width: 60px;
 transition: all 0.3s;
 }
 
@@ -303,7 +245,7 @@ transition: all 0.3s;
 
 
 /* =============================== Mobile styles =========================== */
-#m_navbar{
+.m_navbar{
 display:none;
 background: #607D8B;
 position: fixed;
@@ -314,36 +256,59 @@ color: white;
 border-bottom: 5px solid #7999A9;
 text-align:center;
 }
-#m_navbar a{
+.m_navbar a{
 display: inline-block;
 cursor: pointer;
 padding: 14px;
 color: white;
 text-decoration: none;
 box-shadow: inset 0px 0px #486471;
-    font-size: 23px;
 transition: box-shadow 0.5s;
 }
-#m_navbar a:hover{
+.m_navbar a:hover{
 box-shadow: inset 0px 100px #486471;
 }
 
 @media only screen and (max-width: 750px) {
 /* For mobile phones: */
-#navbar{
+.navebar{
 display:none;
 }
-#m_navbar{
+.m_navbar{
 display: inline-flex;
 align-items: center;
 }
+
+.m_navbar{
+background: #607D8B;
+position: fixed;
+top: 0px;
+right: 0px;
+left: 0px;
+color: white;
+border-bottom: 5px solid #7999A9;
+text-align:center;
+}
+.m_navbar a{
+display: inline-block;
+cursor: pointer;
+padding: 14px;
+color: white;
+text-decoration: none;
+box-shadow: inset 0px 0px #486471;
+transition: box-shadow 0.5s;
+}
+.m_navbar a:hover{
+box-shadow: inset 0px 100px #486471;
+}
 .search_app{
-width:200px;
+width:90%;
 }
 .item p{
 display:none;
 }
 .item h2{
+text-align: center;
 font-size:15px;
 }
 .article{
@@ -353,8 +318,10 @@ font-size:15px;
     width: 270px;
     height: 170px;
 }
-#main_img{
-width: 280px;
+.main_img{
+width: 80%;
+border-top-style: solid;
+border-top-width: 55px;
 }
 .contact_fields{
 width:235px;
@@ -362,27 +329,22 @@ width:235px;
 .contact_div{
 width:250px;
 }
-
 }
 
 /*  Diseñada y programada por : Cristian Carrizo */
 
-#about {
-    float: right;
-}
 
-#header {
+.header {
     align-items: center;
     padding-top: 100px;
     padding-bottom: 100px;
     text-align: center;
 }
 
-.btn {
-    background: #3479AB;
-}
 
-#main_img {
+.main_img {
+    display: grid;
+    align-items: center;
     margin: 0;
 }
 
@@ -391,6 +353,3 @@ width:250px;
     margin: 2px;
 }
 
-.btn span {
-    font-size: 50px;
-}
