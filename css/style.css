@@ -19,6 +19,7 @@ h1 {
     font-size: 2em; 
     margin: 5px;
     text-align: center;
+    margin-bottom: 0px;
 }
 
 .navbar {
@@ -329,9 +330,8 @@ border-bottom: 2px solid #00acff;
 
 
 .search_app{
-    width: 600px;
     margin: 1rem;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     border: 3px solid #efefef;
     border-radius: 30px;
     padding: 10px;
