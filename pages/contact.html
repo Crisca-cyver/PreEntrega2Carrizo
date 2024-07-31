@@ -25,43 +25,43 @@
 <!--||||||||||||||||||||||||||||||||||||||||||||||||||Header|||||||||||||||||||||||||||||||||||||||||||||||||||||-->
 <header>
     <!-- Navegación principal -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Navegación principal">
         <ul class="menu">
-            <li><a href="../index.html" data-text="INICIO"><span class="fas fa-home"></span></a></li>
-            <li><a href="apps.html" data-text="APPS"><span class="fas fa-rocket"></span></a></li>
-            <li><a href="games.html" data-text="JUEGOS"><span class="fas fa-gamepad"></span></a></li>
-            <li><a href="news.html" data-text="NOTICIAS"><span class="fas fa-newspaper"></span></a></li>
-            <li><a href="contact.html" data-text="CONTACTO"><span class="fas fa-phone"></span></a></li>
+            <li><a href="../index.html" aria-label="Ir a Inicio" data-text="INICIO"><span class="fas fa-home"></span></a></li>
+            <li><a href="apps.html" aria-label="Ir a Aplicaciones" data-text="APPS"><span class="fas fa-rocket"></span></a></li>
+            <li><a href="games.html" aria-label="Ir a Juegos" data-text="JUEGOS"><span class="fas fa-gamepad"></span></a></li>
+            <li><a href="news.html" aria-label="Ir a Noticias" data-text="NOTICIAS"><span class="fas fa-newspaper"></span></a></li>
+            <li><a href="contact.html" aria-label="Ir a Contacto" data-text="CONTACTO"><span class="fas fa-phone"></span></a></li>
         </ul>            
     </nav>
-    <h1>Contacto</h1>
+    <h1 aria-label="Formulario de Contacto">Contacto</h1>
 </header>
 
 <!-- Contenido Principal -->
-<main class="main-content">
+<main class="main-content" aria-label="Formulario de contacto">
     <div class="header">
         <div class="center-content">
-            <div class="contact_div">
+            <div class="contact_div" aria-label="Div de contacto">
                 <!-- Formulario de contacto -->
-                <form>
+                <form aria-label="Formulario para enviar un mensaje">
                     <div class="form-group">
                         <label for="fullname">Tu nombre</label>
-                        <input class="contact_fields" type="text" id="fullname" name="fullname" placeholder="Tu nombre" />
+                        <input class="contact_fields" type="text" id="fullname" name="fullname" placeholder="Tu nombre" aria-label="Nombre completo" />
                     </div>
                     <div class="form-group">
                         <label for="email">Tu correo electrónico</label>
-                        <input class="contact_fields" type="email" id="email" name="email" placeholder="Tu correo electrónico" />
+                        <input class="contact_fields" type="email" id="email" name="email" placeholder="Tu correo electrónico" aria-label="Correo electrónico" />
                     </div>
                     <div class="form-group">
                         <label for="subject">Asunto</label>
-                        <input class="contact_fields" type="text" id="subject" name="subject" placeholder="Asunto" />
+                        <input class="contact_fields" type="text" id="subject" name="subject" placeholder="Asunto" aria-label="Asunto del mensaje" />
                     </div>
                     <div class="form-group">
                         <label for="message">Tu mensaje</label>
-                        <textarea class="contact_fields" id="message" name="message" placeholder="Tu mensaje ..."></textarea>
+                        <textarea class="contact_fields" id="message" name="message" placeholder="Tu mensaje ..." aria-label="Contenido del mensaje"></textarea>
                     </div>
                     <div class="form-group">
-                        <input class="contact_btn" type="submit" name="submit" value="Enviar" />
+                        <input class="contact_btn" type="submit" name="submit" value="Enviar" aria-label="Enviar mensaje" />
                     </div>
                 </form>
             </div>
@@ -70,7 +70,7 @@
 </main>
 
 <!-- Pie de Página -->
-<footer class="footer">
+<footer class="footer" aria-label="Información del pie de página">
     <p>COPYRIGHT &copy; CRIS-STORE ,ALL RIGHTS RESERVED</p>
 </footer>
 </body>
