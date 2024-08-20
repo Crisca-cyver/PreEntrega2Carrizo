@@ -1,31 +1,51 @@
-@import 'variables';
-@import 'mixins';
+/* Estilos de la barra de navegación */
 
-#navbar {
-  background: $secondary-color;
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  left: 0px;
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+.navbar {
+  background: #579ec2;
+  width: 100%;
   color: white;
-  border-bottom: 5px solid $navbar-border-color;
-  float: right;
-}
-#navbar ul {
-  list-style: none;
-  margin: 0px;
-}
-#navbar ul li {
-  padding: 21px;
-  @include transition($transition);
-  float: left;
-}
-#navbar ul li:hover {
-  box-shadow: inset 0px 100px #486471;
-}
-#navbar ul li a {
-  padding: 21px;
-  text-decoration: none;
-  color: white;
-  text-shadow: 0px 0px 15px $text-shadow-color;
+  border-bottom: 5px solid #30789b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+
+  .menu {
+      list-style: none;
+      margin: 0;
+      display: flex;
+      padding-left: 0%;
+
+      li {
+          padding-bottom: 21px;
+          padding-top: 21px;
+          transition: all 0.5s;
+          margin-left: 10px;
+
+          &:hover {
+              box-shadow: inset 0px 100px #486471;
+          }
+
+          a {
+              padding: 21px;
+              text-decoration: none;
+              color: white;
+              text-shadow: 0px 0px 15px #353535;
+              position: relative;
+
+              .fas {
+                  display: none;
+              }
+
+              &::before {
+                  content: attr(data-text);
+              }
+          }
+      }
+  }
 }

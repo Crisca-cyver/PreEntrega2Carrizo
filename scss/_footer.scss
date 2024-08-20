@@ -1,36 +1,15 @@
-@import 'variables';
-@import 'mixins';
-
-#footer {
-  background: $footer-background;
+/* Estilos del pie de página */
+.footer {
+  background: #607D8B;
+  width: 100%;
   color: white;
-  text-shadow: 0px 0px 15px $text-shadow-color;
-  border-top: 5px solid $footer-border;
+  text-shadow: 0px 0px 15px #353535;
+  border-top: 5px solid #7999A9;
   height: 60px;
   text-align: center;
   display: grid;
-  grid-template-columns: 1fr;
   gap: 20px;
   align-items: center;
   justify-items: center;
-}
-
-.caret, .caret2 {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 2px;
-  vertical-align: middle;
-}
-
-.caret {
-  border-top: 4px solid;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
-}
-
-.caret2 {
-  border-bottom: 6px solid;
-  border-right: 6px solid transparent;
-  border-left: 6px solid transparent;
+  margin-top: 5px;
 }

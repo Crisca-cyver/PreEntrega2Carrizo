@@ -1,38 +1,42 @@
-@import 'variables';
-@import 'mixins';
-
-.items_area {
-  display: inline-block;
-}
-
+/* Estilos generales para los elementos */
 .item {
   display: inline-block;
-  background: $item-background;
+  background: #ffffff;
   padding: 10px;
   margin: 1px;
-  border: $item-border;
-  @include border-radius(3px);
+  border: 1px solid #F0F0F0;
+  border-radius: 3px;
   margin-bottom: 3px;
-  @include transition($transition);
-}
-.item:hover {
-  background: $item-hover-background;
-}
-.item p {
-  max-width: 150px;
-  color: $item-color;
-}
-.item img {
-  width: 100px;
-  height: 100px;
-}
-.item a {
-  background: $footer-background;
-  padding: 5px 10px;
-  @include border-radius(2px);
-  text-decoration: none;
-  color: white;
-}
-.item a:hover {
-  background: #499ac2;
+  text-align: center;
+  transition: all 0.5s;
+
+  &:hover {
+      background: #fbfbfb;
+  }
+
+  p {
+      text-align: center;
+      color: #606060;
+  }
+
+  img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100px;
+      height: 100px;
+  }
+
+  a {
+      background: #607d8b;
+      padding: 5px 10px;
+      border-radius: 2px;
+      text-decoration: none;
+      color: white;
+      text-align: center;
+
+      &:hover {
+          background: #499ac2;
+      }
+  }
 }

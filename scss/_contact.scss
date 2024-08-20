@@ -1,92 +1,58 @@
-@import 'variables';
-@import 'mixins';
-@import 'animations';
+/* Estilos para el contenedor de contacto */
 
+h1 {
+    text-align: center;
+    font-size: 2em;
+}
+.header {
+    text-align: center;
+}
 .contact_div {
   margin: 15px;
   background: #ffffff;
   padding: 20px;
-  @include border-radius(3px);
-  max-width: 400px;
+  border-radius: 3px;
+  max-width: 338px;
   border: 1px solid #C5C5C5;
   box-shadow: 0px 0px 3px #DBDBDB;
-  @include transition(background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease);
+  transition: all 1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 
+  .contact_fields {
+      padding: 5px 10px;
+      width: 300px;
+      border-radius: 3px;
+      border: 1px solid #ececec;
+      border-bottom: 2px solid #607d8b;
+      background: transparent;
+      transition: width 1s;
 
-  @include animation(enterFromBottom 0.5s ease-out);
-}
+      &:focus {
+          border-bottom: 2px solid #00acff;
+      }
+  }
 
-.contact_div:hover {
-  background: #f0f0f0;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  transform: scale(1.02);
-}
+  .contact_btn {
+      padding: 5px 15px;
+      background: rgb(121, 153, 169);
+      border: 2px solid #7999A9;
+      border-radius: 2px;
+      color: white;
+      cursor: pointer;
+      box-shadow: inset 0px 0px rgba(121, 153, 169, 0.77);
+      transition: box-shadow 0.5s;
 
-.contact_fields {
-  padding: 5px 10px;
-  width: 300px;
-  @include border-radius(3px);
-  border: 1px solid #ececec;
-  border-bottom: 2px solid $footer-background;
-  background: transparent;
-  @include transition(border-bottom 0.3s ease, box-shadow 0.3s ease);
+      &:hover {
+          background: rgb(78, 119, 140);
+          border: 2px solid rgb(78, 119, 140);
+      }
 
-@include animation(focusEffect 0.3s ease);
-}
-
-.contact_fields:focus {
-border-bottom: 2px solid #00acff;
-  box-shadow: 0 0 5px rgba(0, 172, 255, 0.5);  // Sombra en el campo enfocado
-}
-
-.contact_btn {
-  padding: 5px 15px;
-  background: rgb(121, 153, 169);
-  border: 2px solid $footer-border;
-  @include border-radius(2px);
-  color: white;
-  cursor: pointer;
-  box-shadow: inset 0px 0px rgba(121, 153, 169, 0.77);
-  @include transition(background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease);
-
-
-  @include animation(clickEffect 0.2s ease);
-}
-
-.contact_btn:hover {
-  background: rgb(78, 119, 140);
-  border: 2px solid rgb(78, 119, 140);
-}
-
-.contact_btn:active {
-  box-shadow: inset 0px 100px rgba(121, 153, 169, 0.77);
-}
-
-@keyframes enterFromBottom {
-from {
-    opacity: 0;
-    transform: translateY(20px);
-}
-to {
-    opacity: 1;
-    transform: translateY(0);
-}
-}
-
-@keyframes focusEffect {
-0% {
-    border-bottom: 2px solid $footer-background;
-}
-100% {
-    border-bottom: 2px solid #00acff;
-}
-}
-
-@keyframes clickEffect {
-0% {
-    transform: scale(1);
-}
-100% {
-    transform: scale(0.95);
-}
+      &:active {
+          box-shadow: inset 0px 100px rgba(121, 153, 169, 0.77);
+      }
+  }
 }

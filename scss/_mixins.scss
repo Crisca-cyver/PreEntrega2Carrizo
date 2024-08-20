@@ -1,9 +1,6 @@
 /* Mixins */
-@mixin transition($transition) {
-    transition: $transition;
-  }
-  
-  @mixin border-radius($radius) {
-    border-radius: $radius;
-  }
-  
+
+/* Puedes agregar mixins para reutilizar código CSS */
+@mixin transition($property, $duration) {
+  transition: $property $duration;
+}

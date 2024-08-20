@@ -1,64 +1,72 @@
-@import 'variables';
-@import 'mixins';
+/* Estilos responsivos para diferentes tamaños de pantalla */
+@media (max-width: 767px) {
+  .menu {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      background-color: #579ec2;
 
-/* =============================== Mobile styles =========================== */
-m_navbar {
-  display: none;
-  background: $footer-background;
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  left: 0px;
-  color: white;
-  border-bottom: 5px solid $footer-border;
-  text-align: center;
-}
-m_navbar a {
-  display: inline-block;
-  cursor: pointer;
-  padding: 14px;
-  color: white;
-  text-decoration: none;
-  box-shadow: inset 0px 0px #486471;
-  font-size: 23px;
-  @include transition(box-shadow 0.5s);
-}
-m_navbar a:hover {
-  box-shadow: inset 0px 100px #486471;
-}
+      li {
+          margin: 10px 0;
 
-@media only screen and (max-width: 750px) {
-  /* For mobile phones: */
-  #navbar {
-    display: none;
+          a {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+              color: white;
+              text-decoration: none;
+              padding: 10px 0;
+
+              .fas {
+                  margin-right: 8px;
+              }
+
+              span {
+                  display: inline-block;
+                  font-size: 16px;
+                  flex: 1;
+                  text-align: center;
+                  padding: 10px 0;
+              }
+          }
+      }
   }
-  #m_navbar {
-    display: inline-flex;
-    align-items: center;
-  }
+
   .search_app {
-    width: 200px;
+      width: 70%;
+      align-items: center;
   }
-  .item p {
-    display: none;
+
+  .item {
+      p {
+          display: none;
+      }
+
+      h2 {
+          text-align: center;
+          font-size: 15px;
+      }
   }
-  .item h2 {
-    font-size: 15px;
-  }
+
   .article {
-    width: 270px;
+      width: 270px;
+      
+      img {
+          width: 120px;
+          height: auto;
+      }
   }
-  .article img {
-    width: 270px;
-    height: 170px;
+
+  .main_img {
+      width: 50%;
   }
-  #main_img {
-    width: 280px;
-  }
+
   .contact_fields {
-    width: 235px;
+      width: 235px;
   }
+
   .contact_div {
-    width: 250px;
+      width: 250px;
   }
 }

@@ -1,10 +1,17 @@
+/* Importa archivos parciales */
+
+/* Importa variables y mixins primero */
 @import 'variables';
 @import 'mixins';
-@import 'globales';
+
+/* Importa los estilos generales y de estructura */
+@import 'body';
 @import 'header';
 @import 'footer';
-@import 'contact';
 @import 'item';
+@import 'contact';
 @import 'news';
 @import 'animations';
 @import 'mediaqueries';
+
+/* Puedes ordenar los imports según tus necesidades */

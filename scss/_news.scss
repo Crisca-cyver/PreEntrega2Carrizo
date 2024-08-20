@@ -1,81 +1,44 @@
-@import 'variables';
-@import 'mixins';
-@import 'animations';
-
-// Animaciones
-@keyframes zoomIn {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.1);
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(5deg);
-  }
-}
-
-.article-img-zoom {
-  animation: zoomIn 0.5s ease-in-out forwards;
-}
-
-.article-img-rotate {
-  animation: rotate 0.5s ease-in-out forwards;
-}
-
+/* Estilos para los artículos de noticias */
 .news_articles {
   display: inline-block;
-}
 
+  .article {
+      display: inline-block;
+      max-width: 350px;
+      width: 350px;
+      background: white;
+      padding: 15px;
+      margin: 5px;
+      border: 1px solid #DBDBDB;
+      border-radius: 3px;
+      transition: width 1s;
 
-.article {
-  display: inline-block;
-  max-width: 350px;
-  width: 350px;
-  background: $news-article-background;
-  padding: 15px;
-  margin: 5px;
-  border: $news-article-border;
-  @include border-radius(3px);
-  @include transition(width 1s);
-}
+      p {
+          color: #606060;
+      }
 
-.article p {
-  color: $item-color;
-}
+      a {
+          background: #607d8b;
+          padding: 5px 10px;
+          border-radius: 2px;
+          text-decoration: none;
+          color: white;
+          border: 1px solid #dedede;
 
-.article a {
-  background: $footer-background;
-  padding: 5px 10px;
-  @include border-radius(2px);
-  text-decoration: none;
-  color: white;
-  border: 1px solid #dedede;
-  @include transition(background 0.3s ease, border-color 0.3s ease);
-}
+          &:hover {
+              background: #499ac2;
+          }
+      }
 
-.article a:hover {
-  background: #499ac2;
-}
+      h5 {
+          color: rgb(173, 173, 173);
+          font-size: 11px;
+          font-family: sans-serif;
+      }
 
-.article h5 {
-  color: rgb(173, 173, 173);
-  font-size: 11px;
-  font-family: sans-serif;
-}
-
-.article img {
-  width: 350px;
-  height: 196px;
-  transition: transform 0.5s ease-in-out;
-}
-
-.article img:hover {
-  @extend .article-img-zoom;
+      img {
+          width: 140px;
+          height: auto;
+      }
+  }
 }

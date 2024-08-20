@@ -1,5 +1,25 @@
+/* Estilos generales del cuerpo */
 body {
     margin: 0;
-    font-family: $font-family;
-    background: $background-color;
+    font-family: 'Amaranth', sans-serif;
+    background: #F5F5F5;
+    width: 100%;
+
+    h2 {
+        text-align: center;
+    }
 }
+p {
+    display: flex;
+    justify-content: center;
+    .main_img {
+        width: 45%;
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center;     /* Centra verticalmente */
+        vertical-align: middle;
+        place-items: center;
+        height: auto;
+    }
+}
+
