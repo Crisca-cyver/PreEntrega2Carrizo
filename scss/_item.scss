@@ -40,3 +40,16 @@
       }
   }
 }
+
+items_area {
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1rem;
+    grid-auto-flow: row dense;
+    grid-auto-rows: 1fr;
+
+    .item {
+        width: 100%;
+    }
+}

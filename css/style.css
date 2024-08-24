@@ -36,7 +36,7 @@ p .main_img {
   justify-content: center;
 }
 
-.navbar {
+nav.navbar {
   background: #579ec2;
   width: 100%;
   color: white;
@@ -46,33 +46,43 @@ p .main_img {
   align-items: center;
   padding: 0;
 }
-.navbar .menu {
+nav.navbar .menu {
   list-style: none;
   margin: 0;
   display: flex;
   padding-left: 0%;
 }
-.navbar .menu li {
+nav.navbar .menu li {
   padding-bottom: 21px;
   padding-top: 21px;
   transition: all 0.5s;
   margin-left: 10px;
 }
-.navbar .menu li:hover {
+nav.navbar .menu li:hover {
   box-shadow: inset 0px 100px #486471;
 }
-.navbar .menu li a {
+nav.navbar .menu li a {
   padding: 21px;
   text-decoration: none;
   color: white;
   text-shadow: 0px 0px 15px #353535;
   position: relative;
 }
-.navbar .menu li a .fas {
+nav.navbar .menu li a .fas {
   display: none;
 }
-.navbar .menu li a::before {
+nav.navbar .menu li a::before {
   content: attr(data-text);
+}
+
+.search_app {
+  margin: 1rem;
+  margin-bottom: 0px;
+  border: 3px solid #efefef;
+  border-radius: 30px;
+  padding: 10px;
+  width: 90%;
+  transition: all 1s;
 }
 
 /* Estilos del pie de página */
@@ -127,6 +137,18 @@ p .main_img {
 }
 .item a:hover {
   background: #499ac2;
+}
+
+items_area {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  grid-auto-flow: row dense;
+  grid-auto-rows: 1fr;
+}
+items_area .item {
+  width: 100%;
 }
 
 /* Estilos para el contenedor de contacto */
@@ -255,7 +277,7 @@ h1 {
     text-align: center;
     padding: 10px 0;
   }
-  .search_app {
+  input.search_app {
     width: 70%;
     align-items: center;
   }
