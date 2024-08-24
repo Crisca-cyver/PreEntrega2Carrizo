@@ -305,6 +305,29 @@ h1 {
     width: 250px;
   }
 }
+.app-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .app-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .app-container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.app-item {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
 /* Puedes ordenar los imports según tus necesidades */
 
 /*# sourceMappingURL=style.css.map */

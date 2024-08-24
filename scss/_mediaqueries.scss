@@ -70,3 +70,33 @@
       width: 250px;
   }
 }
+
+
+
+
+$app-columns: (
+  small: 1fr,
+  medium: repeat(3, 1fr),
+  large: repeat(6, 1fr),
+);
+
+.app-container {
+  display: grid;
+  grid-template-columns: map-get($app-columns, small);
+  gap: 1.5rem;
+  
+  @media (min-width: 768px) {
+    grid-template-columns: map-get($app-columns, medium);
+  }
+
+  @media (min-width: 992px) {
+    grid-template-columns: map-get($app-columns, large);
+  }
+}
+
+.app-item {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
