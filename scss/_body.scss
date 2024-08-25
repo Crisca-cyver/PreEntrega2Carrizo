@@ -13,12 +13,7 @@ p {
     display: flex;
     justify-content: center;
     .main_img {
-        width: 45%;
-        display: flex;
-        justify-content: center; /* Centra horizontalmente */
-        align-items: center;     /* Centra verticalmente */
-        vertical-align: middle;
-        place-items: center;
-        height: auto;
+        display: grid;
+        align-items: center;
     }
 }
