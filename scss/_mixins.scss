@@ -1,6 +1,5 @@
 /* Mixins */
 
-/* Puedes agregar mixins para reutilizar código CSS */
 @mixin transition($property, $duration) {
   transition: $property $duration;
 }
