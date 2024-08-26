@@ -5,57 +5,78 @@
 /* Mixins */
 /* Importa los estilos generales y de estructura */
 /* Estilos generales del cuerpo */
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
+  height: 100%;
   font-family: "Amaranth", sans-serif;
-  background: #F5F5F5;
+  background: #f5f5f5;
   width: 100%;
 }
 body h2 {
   text-align: center;
 }
 
-p {
+#header {
   display: flex;
-  justify-content: center;
-}
-p .main_img {
-  display: grid;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 }
 
+#header.jumbotron {
+  padding: 0;
+  background-color: initial;
+}
+#header.jumbotron .main_img {
+  width: auto;
+  height: 500px;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 767px) {
+  #header.jumbotron {
+    margin: 4rem 0;
+  }
+  #header.jumbotron .main_img {
+    width: auto;
+    height: 300px;
+  }
+}
 /* Estilos de la barra de navegación */
 .center {
   display: flex;
   justify-content: center;
 }
 
+/* Estilos de la barra de navegación */
 nav.navbar {
+  overflow: hidden;
   background: #579ec2;
   width: 100%;
   color: white;
   border-bottom: 5px solid #30789b;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
+  display: block;
+  padding: 1rem 1.75rem;
 }
 nav.navbar .menu {
   list-style: none;
   margin: 0;
+  padding: 0;
   display: flex;
-  padding-left: 0%;
+  align-items: center;
+  justify-content: space-between;
 }
 nav.navbar .menu li {
-  padding-bottom: 21px;
   transition: all 0.5s;
-  margin-left: 10px;
 }
 nav.navbar .menu li:hover {
   box-shadow: inset 0px 100px #486471;
 }
 nav.navbar .menu li a {
-  padding: 21px;
   text-decoration: none;
   color: white;
   text-shadow: 0px 0px 15px #353535;
@@ -68,6 +89,34 @@ nav.navbar .menu li a::before {
   content: attr(data-text);
 }
 
+/* Estilos para pantallas pequeñas */
+@media (max-width: 767px) {
+  nav.navbar {
+    padding: 1rem 0.75rem;
+  }
+  nav.navbar .menu {
+    justify-content: space-around;
+  }
+  nav.navbar .menu li a .fas {
+    display: inline-block !important;
+  }
+  nav.navbar .menu li a::before {
+    display: none;
+  }
+  nav.navbar .menu li a span {
+    font-size: 24px;
+    padding: 0;
+  }
+}
+/* Estilos para pantallas grandes */
+@media (min-width: 768px) {
+  nav.navbar .menu li a .fas {
+    display: none;
+  }
+  nav.navbar .menu li a::before {
+    display: inline;
+  }
+}
 .search_app {
   margin-bottom: 0px;
   border: 3px solid #efefef;
@@ -79,11 +128,11 @@ nav.navbar .menu li a::before {
 
 /* Estilos del pie de página */
 .footer {
-  background: #607D8B;
+  background: #607d8b;
   width: 100%;
   color: white;
   text-shadow: 0px 0px 15px #353535;
-  border-top: 5px solid #7999A9;
+  border-top: 5px solid #7999a9;
   height: 60px;
   text-align: center;
   display: grid;
@@ -257,10 +306,6 @@ input.search_app {
   height: auto;
 }
 
-.main_img {
-  width: 80%;
-}
-
 .contact_fields {
   width: 235px;
 }
@@ -290,101 +335,6 @@ input.search_app {
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: #f9f9f9;
-}
-
-/* Estilos de la barra de navegación */
-.navbar {
-  background: #579ec2;
-  width: 100%;
-  color: white;
-  border-bottom: 5px solid #30789b;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
-}
-
-/* Estilos del menú */
-.menu {
-  list-style: none;
-  margin: 0;
-  display: flex;
-  padding-left: 0;
-  width: 100%;
-  height: 4.2rem;
-  background-color: #579ec2;
-  /* Estilos para pantallas pequeñas */
-  /* Estilos para pantallas grandes */
-}
-.menu li {
-  padding: 21px 0;
-  transition: all 0.5s;
-  margin-left: 10px;
-}
-.menu li:hover {
-  box-shadow: inset 0px 100px #486471;
-}
-.menu li a {
-  padding: 21px;
-  text-decoration: none;
-  color: white;
-  text-shadow: 0px 0px 15px #353535;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-.menu li a .fas {
-  display: none;
-  margin-right: 2px;
-}
-.menu li a::before {
-  content: attr(data-text);
-  display: inline;
-}
-.menu li a span {
-  display: inline-block;
-  font-size: 16px;
-  flex: 1;
-  text-align: center;
-  padding: 10px 0;
-}
-@media (max-width: 767px) {
-  .menu {
-    justify-content: space-around;
-  }
-  .menu li {
-    padding: 0;
-    margin: 10px 0;
-  }
-  .menu li a {
-    padding: 10px 0;
-  }
-  .menu li a .fas {
-    display: inline-block !important;
-  }
-  .menu li a::before {
-    display: none;
-  }
-  .menu li a span {
-    font-size: 24px;
-    padding: 0;
-  }
-}
-@media (min-width: 768px) {
-  .menu li a .fas {
-    display: none;
-  }
-  .menu li a::before {
-    display: inline;
-  }
-}
-
-p {
-  display: block;
-  color: inherit;
-  margin: 0;
 }
 
 /* Puedes ordenar los imports según tus necesidades */

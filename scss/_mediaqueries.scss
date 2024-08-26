@@ -2,42 +2,34 @@
 
 // buscador
 input.search_app {
-    width: 90%;
-    align-items: center;
+  width: 90%;
+  align-items: center;
 }
 
 .item {
-   
-    h2 {
-        text-align: center;
-        font-size: 17px;
-        font-weight: 900;
-    }
+  h2 {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 900;
+  }
 }
 
 .article {
-    width: 270px;
-    
-    img {
-        width: 120px;
-        height: auto;
-    }
-}
+  width: 270px;
 
-.main_img {
-    width: 80%;
+  img {
+    width: 120px;
+    height: auto;
+  }
 }
 
 .contact_fields {
-    width: 235px;
+  width: 235px;
 }
 
 .contact_div {
-    width: 250px;
+  width: 250px;
 }
-
-
-
 
 $app-columns: (
   small: 1fr,
@@ -49,7 +41,7 @@ $app-columns: (
   display: grid;
   grid-template-columns: map-get($app-columns, small);
   gap: 1.5rem;
-  
+
   @media (min-width: 768px) {
     grid-template-columns: map-get($app-columns, medium);
   }
@@ -65,110 +57,3 @@ $app-columns: (
   border-radius: 8px;
   background-color: #f9f9f9;
 }
-
-/* Estilos de la barra de navegación */
-.navbar {
-    background: #579ec2;
-    width: 100%;
-    color: white;
-    border-bottom: 5px solid #30789b;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-  }
-  
-  /* Estilos del menú */
-  .menu {
-    list-style: none;
-    margin: 0;
-    display: flex;
-    padding-left: 0;
-    width: 100%;
-    height: 4.2rem;
-    background-color: #579ec2;
-  
-    li {
-      padding: 21px 0;
-      transition: all 0.5s;
-      margin-left: 10px;
-  
-      &:hover {
-        box-shadow: inset 0px 100px #486471;
-      }
-  
-      a {
-        padding: 21px;
-        text-decoration: none;
-        color: white;
-        text-shadow: 0px 0px 15px #353535;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-  
-        .fas {
-          display: none;
-          margin-right: 2px;
-        }
-  
-        &::before {
-          content: attr(data-text);
-          display: inline;
-        }
-  
-        span {
-          display: inline-block;
-          font-size: 16px;
-          flex: 1;
-          text-align: center;
-          padding: 10px 0;
-        }
-      }
-    }
-  
-    /* Estilos para pantallas pequeñas */
-    @media (max-width: 767px) {
-      justify-content: space-around;
-  
-      li {
-        padding: 0;
-        margin: 10px 0;
-  
-        a {
-          padding: 10px 0;
-  
-          .fas {
-            display: inline-block !important; 
-          }
-  
-          &::before {
-            display: none; 
-          }
-  
-          span {
-            font-size: 24px;
-            padding: 0;
-          }
-        }
-      }
-    }
-  
-    /* Estilos para pantallas grandes */
-    @media (min-width: 768px) {
-      li a .fas {
-        display: none; 
-      }
-  
-      li a::before {
-        display: inline;
-      }
-    }
-  }
-
-  p {
-    display: block;
-    color: inherit; 
-    margin: 0;
-  }

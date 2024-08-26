@@ -1,60 +1,100 @@
 /* Estilos de la barra de navegación */
 
-
 .center {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-
+/* Estilos de la barra de navegación */
 nav.navbar {
+  overflow: hidden;
   background: #579ec2;
   width: 100%;
   color: white;
   border-bottom: 5px solid #30789b;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
+  display: block;
+  padding: 1rem 1.75rem;
 
   .menu {
-      list-style: none;
-      margin: 0;
-      display: flex;
-      padding-left: 0%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-      li {
-          padding-bottom: 21px;
-          transition: all 0.5s;
-          margin-left: 10px;
+    li {
+      transition: all 0.5s;
 
-          &:hover {
-              box-shadow: inset 0px 100px #486471;
-          }
-
-          a {
-              padding: 21px;
-              text-decoration: none;
-              color: white;
-              text-shadow: 0px 0px 15px #353535;
-              position: relative;
-
-              .fas {
-                  display: none;
-              }
-
-              &::before {
-                  content: attr(data-text);
-              }
-          }
+      &:hover {
+        box-shadow: inset 0px 100px #486471;
       }
+
+      a {
+        // padding: 21px;
+        text-decoration: none;
+        color: white;
+        text-shadow: 0px 0px 15px #353535;
+        position: relative;
+
+        .fas {
+          display: none;
+        }
+
+        &::before {
+          content: attr(data-text);
+        }
+      }
+    }
   }
 }
+/* Estilos para pantallas pequeñas */
+@media (max-width: 767px) {
+  nav.navbar {
+    padding: 1rem 0.75rem;
+    .menu {
+      justify-content: space-around;
+
+      li {
+        a {
+          .fas {
+            display: inline-block !important;
+          }
+
+          &::before {
+            display: none;
+          }
+
+          span {
+            font-size: 24px;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 768px) {
+  nav.navbar {
+    .menu {
+      li a .fas {
+        display: none;
+      }
+
+      li a::before {
+        display: inline;
+      }
+    }
+  }
+}
+
 .search_app {
-    margin-bottom: 0px;
-    border: 3px solid #efefef;
-    border-radius: 30px;
-    padding: 10px;
-    width: 90%;
-    transition: all 1s;
+  margin-bottom: 0px;
+  border: 3px solid #efefef;
+  border-radius: 30px;
+  padding: 10px;
+  width: 90%;
+  transition: all 1s;
 }
