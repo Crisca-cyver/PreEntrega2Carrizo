@@ -1,0 +1,15 @@
+{
+  "name": "preentrega2carrizo",
+  "version": "1.0.0",
+  "description": "## Descripción Tienda de Cristian es un sitio web dedicado a ofrecer aplicaciones y juegos gratuitos para dispositivos Android, así como las últimas noticias sobre teléfonos y desarrollo de aplicaciones. El objetivo es proporcionar a los usuarios una experiencia fácil y accesible para encontrar contenido relevante y útil.",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass scss/style.scss css/style.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.77.8"
+  }
+}

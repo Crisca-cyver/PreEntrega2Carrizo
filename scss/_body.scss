@@ -1,19 +1,43 @@
 /* Estilos generales del cuerpo */
-body {
-    margin: 0;
-    font-family: 'Amaranth', sans-serif;
-    background: #F5F5F5;
-    width: 100%;
-
-    h2 {
-        text-align: center;
-    }
+html {
+  height: 100%;
 }
-p {
-    display: flex;
-    justify-content: center;
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "Amaranth", sans-serif;
+  background: #f5f5f5;
+  width: 100%;
+
+  h2 {
+    text-align: center;
+  }
+}
+#header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#header.jumbotron {
+  padding: 0;
+  background-color: initial;
+
+  .main_img {
+    width: auto;
+    height: 500px;
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 767px) {
+  #header.jumbotron {
+    margin: 4rem 0;
+
     .main_img {
-        display: grid;
-        align-items: center;
+      width: auto;
+      height: 300px;
     }
+  }
 }
